@@ -1,0 +1,43 @@
+body{
+	background-color: acacac;
+}
+
+.field{
+	display: inline-block;
+	width: 300px;
+}
+.search{
+	display: block;
+	margin-top: 20px;
+}
+
+
+/*	STYLE FOR GOOGLE MAP*/
+
+#map_canvas {
+	width: 400px;
+	height: 300px;/**/
+	background-color: #CCC;
+}
+
+.btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	background: #3498db;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
