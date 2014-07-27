@@ -12,7 +12,7 @@
 		    		<?php foreach ($data as $company) { ?>
 		    		<li>
 		    			<a href="/directory/public/companies/<?php echo $company->slug; ?>">
-		    				<h2><?php echo utf8_encode(stripslashes($company->company)); ?></h2>
+		    				<h2><?php echo (stripslashes($company->company)); ?></h2>
 		    			</a>
 		    			<h3><?php echo $company->category; ?></h3>
 		    			<p><?php echo $company->county . ', ' . 

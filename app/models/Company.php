@@ -47,7 +47,7 @@ class Company
     *   $param $location string goes for county and city name
     *   $return object with all the companies that follow the criteria
     */
-    public function searchResults($name = '', $location = ''){ 
+    public function searchResults($name = '', $location = ''){  //echo $name . '<br>' . $location; die();
 
         $name = '%' . $name .'%'; $location = '%' . $location . '%';
         $data = array($name, $name, $location, $location); 

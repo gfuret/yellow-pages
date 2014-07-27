@@ -1,18 +1,21 @@
 <?php 
-    include '../app/views/template/partials/header.php'; 
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $what = (!empty($_POST['what']) ? $_POST['what'] : 'all');
         $where= (!empty($_POST['where']) ? $_POST['where'] : 'all');
 
-        // $name = str_replace(array(' '), "%20", $what);
-        // $location = str_replace(array(' '), '%20', $where);        
-        $name = str_replace(array(' ','%20'), "_", htmlspecialchars(trim($what)));
-        $location = str_replace(array(' ','%20'), "_", htmlspecialchars(trim($where)));
+        $search_issues = array(' ','%20','Ä','ä','Õ','õ','Ö','ö','Ü','ü','Š','š','Ž','ž');
+        $search_fix = array('_','_','?','?','?','?','?','?','?','?','?','?','?','?');
+
+        // $name = str_replace(array(' ','%20'), "_", htmlspecialchars(trim($what)));
+        // $location = str_replace(array(' ','%20'), "_", htmlspecialchars(trim($where)));     
+        $name = str_replace($search_issues, $search_fix, htmlspecialchars(trim($what)));
+        $location = str_replace($search_issues, $search_fix, htmlspecialchars(trim($where)));
 
         header('Location: /directory/public/results/' . $name . '/' . $location);
     }
-
+    include '../app/views/template/partials/header.php'; 
 ?>
     <!-- Jumbotron -->
     <div class="jumbotron">
