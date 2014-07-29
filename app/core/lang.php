@@ -15,13 +15,14 @@ require '../app/models/company.php';
     *   @return false or true if it finds the argument
     *   the data is filled in the property $fields
     */
-    public static function test($text = '', $lang = 'en'){
+    public static function test($text = '', $lang = 'et'){
     	if (!empty($text)) {
     	$translation = data::getInstance();
             $argument = array($text);
             $translation->query('SELECT language.' . $lang . ' as lang
                             FROM language WHERE name = ?', $argument);
 	    	if ($translation->count() > 0) {
+                //var_dump($translation->results()); die();
                 echo htmlentities($translation->first()->lang, ENT_COMPAT, "ISO-8859-15");
                 return true;
 	    	}

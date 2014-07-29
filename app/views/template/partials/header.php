@@ -1,5 +1,10 @@
 <?php 
-	$lang = ( !empty($_COOKIE["lang"]) ? $_COOKIE["lang"] : 'ee');
+	if (!empty($_COOKIE["lang"])) {
+		$lang = $_COOKIE["lang"];
+	}else{
+		$lang = 'et';
+		setcookie("lang", $lang);
+	}
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" xmlns="http://www.w3.org/1999/xhtml" lang="et" dir="ltr" itemscope itemtype="http://schema.org/Catalogue">
@@ -22,7 +27,7 @@
 	<div class="pull-left"><a  class="btn" href="/directory/"><?php lang::test('Home', $lang); ?></a></div>	
 	<div class="lang pull-right">
 		<button class="btn" onclick="setLanguage('en')">EN</button>
-		<button class="btn" onclick="setLanguage('ee')">EE</button>
+		<button class="btn" onclick="setLanguage('et')">ET</button>
 	</div>
 	</div>
 
