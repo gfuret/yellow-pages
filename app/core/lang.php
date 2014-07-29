@@ -1,9 +1,9 @@
 <?php
-require '../app/models/Company.php';
+require '../app/models/company.php';
 	/**
 	* 
 	*/
-	class Lang
+	class lang
 	{
 
 	public $fields;
@@ -22,7 +22,7 @@ require '../app/models/Company.php';
             $translation->query('SELECT language.' . $lang . ' as lang
                             FROM language WHERE name = ?', $argument);
 	    	if ($translation->count() > 0) {
-	    		echo $translation->first()->lang;
+                echo htmlentities($translation->first()->lang, ENT_COMPAT, "ISO-8859-15");
                 return true;
 	    	}
     	return false;    		
@@ -30,6 +30,5 @@ require '../app/models/Company.php';
     		return false;
     	}
     }
-
-
+//echo htmlentities("lääne-eesti", ENT_COMPAT, "UTF-8");
 	}

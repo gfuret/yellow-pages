@@ -4,7 +4,7 @@
 /**
 * 	Model for table page
 */
-class Language
+class language
 {
     public $name;
 }

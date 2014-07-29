@@ -53,7 +53,6 @@ $( document ).ready(function() {
    //Set the language
    //lang has to match with the letters in the database
    function setLanguage(lang) {
-      console.log('at least I am here');
       document.cookie="lang=" + lang;
       location.reload();
    }

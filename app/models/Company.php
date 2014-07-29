@@ -4,7 +4,7 @@
 /**
 * 	Model for table page
 */
-class Company
+class company
 {
 
 	public $fields;

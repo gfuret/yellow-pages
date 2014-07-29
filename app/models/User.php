@@ -3,7 +3,7 @@
 /**
 * 
 */
-class User
+class user
 {
     public $name;
 }

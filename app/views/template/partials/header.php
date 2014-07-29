@@ -1,11 +1,10 @@
 <?php 
-	$lang = (isset($_COOKIE["lang"]) ? $_COOKIE["lang"] : 'en');
-	//header('Content-Type: text/html; charset=ISO-8859-1');
+	$lang = ( !empty($_COOKIE["lang"]) ? $_COOKIE["lang"] : 'ee');
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" xmlns="http://www.w3.org/1999/xhtml" lang="et" dir="ltr" itemscope itemtype="http://schema.org/Catalogue">
 <head>
-	<meta charset="UTF-8" />
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8">
 	<title>Directory</title> 
     <link href="/directory/public/css/bootstrap.css" rel="stylesheet">
     <link href="/directory/public/css/jquery-ui.min.css" rel="stylesheet">

@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require 'config.php';
 
 /**
 * 
@@ -21,7 +21,8 @@ class data
 	{
 		require_once 'config.php';
 		try {
-			$this->_pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";",DB_USER,DB_PASS);
+			$this->_pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . 
+				DB_NAME . ";",DB_USER,DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		} catch (Exception $e) {
 			die($e->getMessage());	
 		}
