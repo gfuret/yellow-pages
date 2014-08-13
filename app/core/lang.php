@@ -23,7 +23,8 @@ require '../app/models/company.php';
                             FROM language WHERE name = ?', $argument);
 	    	if ($translation->count() > 0) {
                 //var_dump($translation->results()); die();
-                echo htmlentities($translation->first()->lang, ENT_COMPAT, "ISO-8859-15");
+                //echo htmlentities($translation->first()->lang, ENT_COMPAT, "ISO8859-1");
+                echo $translation->first()->lang;
                 return true;
 	    	}
     	return false;    		

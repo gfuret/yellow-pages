@@ -5,6 +5,7 @@
 		$lang = 'et';
 		setcookie("lang", $lang);
 	}
+
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" xmlns="http://www.w3.org/1999/xhtml" lang="et" dir="ltr" itemscope itemtype="http://schema.org/Catalogue">
